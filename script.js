@@ -100,6 +100,10 @@ function resettingTheForm() {
         radioInput.checked = false;
         radioInputErrorMessage.classList.remove('mortgage-calculator-left-form-input-radio-error-active');
     };
+
+    for (const inputError of inputContainers) {
+        inputError.classList.remove('form-input-error-active');
+    };
 };
 
 // INITIALIZE BUTTON
