@@ -29,6 +29,19 @@ const mortgageCalculator = {
 };
 
 
+// REMOVING STRINGS
+
+function removingStrings(string) {
+    const regex = /[A-Z]/gi;
+    return string.replaceAll(regex, '');
+};
+
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('input', e => {
+        inputs[i].value = removingStrings(inputs[i].value);
+    });
+};
+
 // CALCULATING THE MORTGAGE
 
 function calculatingTheMortgage(e) {
