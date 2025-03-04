@@ -92,11 +92,13 @@ function resettingTheForm() {
     // INPUTS
     for (const input of inputs) {
         input.value = '';
+        input.classList.remove('form-input-error-active');
     };
  
     // RADIO INPUTS
     for (const radioInput of radioInputs) {
         radioInput.checked = false;
+        radioInputErrorMessage.classList.remove('mortgage-calculator-left-form-input-radio-error-active');
     };
 };
 
