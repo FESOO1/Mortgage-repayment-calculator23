@@ -38,12 +38,13 @@ main {
 
 .mortgage-calculator {
     background-color: white;
-    width: 1000px;
+    width: 900px;
     border-radius: 1rem;
     box-shadow: 0 0 15px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.1);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
 }
 
 /* 
@@ -91,6 +92,7 @@ main {
 /* MORTGAGE CALCULATOR LEFT FORM BUTTON */
 
 .mortgage-calculator-left-form-button {
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,3 +301,8 @@ main {
 }
 
 /* MORTGAGE CALCULATOR RIGHT */
+
+.mortgage-calculator-right {
+    background-color: var(--c-dark-slate);
+    border-bottom-left-radius: 5rem;
+}
