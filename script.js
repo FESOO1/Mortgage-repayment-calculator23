@@ -65,21 +65,15 @@ function calculatingTheMortgage(e) {
         mortgageCalculatorRightEmpty.classList.add('mortgage-calculator-right-empty-hidden');  
         mortgageCalculatorRightItself.classList.add('mortgage-calculator-right-itself-active');  
 
-        if (radioInputs[0].checked) {
-            const totalMonths = mortgageCalculator.mortgageTerm * 12;
-            const repaymentOutput = mortgageCalculator.mortgageAmount / totalMonths;
+        const monthlyIterestRate = (mortgageCalculator.mortgageInterestRate / 100) / 12;
+        const totalMonth = mortgageCalculator.mortgageTerm * 12;
+        const calculatedOutput = String(mortgageCalculator.mortgageAmount * (monthlyIterestRate * (1 + monthlyIterestRate) ** totalMonth) / ((1 + monthlyIterestRate) ** totalMonth - 1));
+        const dividerPoint = String(calculatedOutput.indexOf('.'));
+        mortgageCalculator.mortgageMontlyRepayment = calculatedOutput.slice(0, Number(dividerPoint) + 3);
+        mortgageCalculator.mortgageTotalRepayment = mortgageCalculator.mortgageMontlyRepayment * totalMonth;
 
-            console.log('Repayment');
-        } else if (radioInputs[1].checked) {
-            const monthlyIterestRate = (mortgageCalculator.mortgageInterestRate / 100) / 12;
-            const monthForMonth = monthlyIterestRate * mortgageCalculator.mortgageAmount;
-
-            console.log(monthForMonth);
-            console.log('Interest');
-        };
-
-        console.log(radioInputs[0].checked === true ? 'repayment' : false);
-        console.log(radioInputs[1].checked === true ? 'interest' : false);
+        monthlyRepaymentText.textContent = `$ ${mortgageCalculator.mortgageMontlyRepayment}`;
+        totalRepaymentText.textContent = `$ ${mortgageCalculator.mortgageTotalRepayment}`;
     };
 };
 
