@@ -18,9 +18,48 @@
           <label for="mortgageAmountInput" class="mortgage-calculator-left-form-input-container">
             <h4 class="mortgage-calculator-left-form-input-label">Mortgage Amount</h4>
             <div class="mortgage-calculator-left-form-input-container-itself">
+              <svg class="mortgage-calculator-left-form-input-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+                <path d="M5 10H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 14H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 17.6076C17.8693 19.6404 15.812 21 13.4615 21C9.89293 21 7 17.866 7 14V10C7 6.13401 9.89293 3 13.4615 3C15.812 3 17.8693 4.35958 19 6.39241" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
               <input type="text" id="mortgageAmountInput" class="mortgage-calculator-left-form-input-itself">
             </div>
+            <p class="mortgage-calculator-left-form-input-error">This field is required</p>
           </label>
+          <div class="mortgage-calculator-left-form-mortgage-term-interest-rate">
+            <label for="mortgageTermInput" class="mortgage-calculator-left-form-input-container">
+              <h4 class="mortgage-calculator-left-form-input-label">Mortgage Term</h4>
+              <div class="mortgage-calculator-left-form-input-container-itself-two">
+                <input type="text" id="mortgageTermInput" class="mortgage-calculator-left-form-input-itself">
+                <h4 class="mortgage-calculator-left-form-input-inner-label">years</h4>
+              </div>
+              <p class="mortgage-calculator-left-form-input-error">This field is required</p>
+            </label>
+            <label for="interestRateInput" class="mortgage-calculator-left-form-input-container">
+              <h4 class="mortgage-calculator-left-form-input-label">Intesert Rate</h4>
+              <div class="mortgage-calculator-left-form-input-container-itself-two">
+                <input type="text" id="interestRateInput" class="mortgage-calculator-left-form-input-itself">
+                <h4 class="mortgage-calculator-left-form-input-inner-label">%</h4>
+              </div>
+              <p class="mortgage-calculator-left-form-input-error">This field is required</p>
+            </label>
+          </div>
+          <div class="mortgage-calculator-left-form-input-container-two">
+            <h4 class="mortgage-calculator-left-form-input-label">Mortgage Type</h4>
+            <label for="repaymentInput" class="mortgage-calculator-left-form-input-radio-container">
+              <input type="radio" name="mortgageType" class="mortgage-calculator-left-form-input-radio-itself" id="repaymentInput">
+              <h4 class="mortgage-calculator-left-form-input-radio-label-itself">Repayment</h4>
+            </label>
+            <label for="interestOnlyInput" class="mortgage-calculator-left-form-input-radio-container">
+              <input type="radio" name="mortgageType" class="mortgage-calculator-left-form-input-radio-itself" id="interestOnlyInput">
+              <h4 class="mortgage-calculator-left-form-input-radio-label-itself">Interest Only</h4>
+            </label>
+          </div>
+          <button type="submit" class="mortgage-calculator-left-form-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>
+            <h4 class="mortgage-calculator-left-form-button-text">Calculate Repayments</h4>
+          </button>
         </form>
       </div>
       <div class="mortgage-calculator-right"></div>
