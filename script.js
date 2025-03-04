@@ -19,6 +19,16 @@ const mortgageCalculatorRightItself = document.querySelector('.mortgage-calculat
 const monthlyRepaymentText = document.querySelector('#monthlyRepaymentText');
 const totalRepaymentText = document.querySelector('#totalRepaymentText');
 
+// MORTGAGE CALCULATOR
+const mortgageCalculator = {
+    mortgageAmount: 0,
+    mortgageTerm: 0,
+    mortgageInterestRate: 0,
+    mortgageType: '',
+    mortgageMontlyRepayment: 0,
+    mortgageTotalRepayment: 0,
+};
+
 
 // CALCULATING THE MORTGAGE
 
@@ -34,23 +44,38 @@ function calculatingTheMortgage(e) {
         } else {
             inputContainers[i].classList.remove('form-input-error-active');
         };
-        console.log(inputs[i]);
     };
 
     for (const radioInput of radioInputs) {
         if (radioInput.checked) {
             radioInputErrorMessage.classList.remove('mortgage-calculator-left-form-input-radio-error-active');
+            mortgageCalculator.mortgageType = radioInput.value;
             break;
         } else {
             errorMessages.push(radioInputErrorMessage);
             radioInputErrorMessage.classList.add('mortgage-calculator-left-form-input-radio-error-active');
         };
-
-        console.log(radioInput.value);
     };
 
     if (errorMessages.length === 0) {
-        
+        mortgageCalculator.mortgageAmount = Number(mortgageAmountInput.value);
+        mortgageCalculator.mortgageTerm = Number(mortgageTermInput.value);
+        mortgageCalculator.mortgageInterestRate = Number(interestRateInput.value);
+        // HANDLING THE CONTAINER'S VISIBILITY
+        mortgageCalculatorRightEmpty.classList.add('mortgage-calculator-right-empty-hidden');  
+        mortgageCalculatorRightItself.classList.add('mortgage-calculator-right-itself-active');  
+
+        if (mortgageCalculator.mortgageType === 'repayment') {
+            const totalMonths = mortgageCalculator.mortgageTerm * 12;
+            const repaymentOutput = mortgageCalculator.mortgageAmount / totalMonths;
+
+            console.log(repaymentOutput);
+            /* const monthlyIterestRate = (mortgageCalculator.mortgageInterestRate / 100) / 12;
+            console.log(monthlyIterestRate);
+            const monthForMonth = monthlyIterestRate * mortgageCalculator.mortgageAmount;
+
+            console.log(monthForMonth); */
+        };
     };
 };
 
