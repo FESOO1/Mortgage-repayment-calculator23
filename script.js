@@ -87,6 +87,14 @@ function resettingTheForm() {
 
     mortgageCalculatorRightEmpty.classList.remove('mortgage-calculator-right-empty-hidden');  
     mortgageCalculatorRightItself.classList.remove('mortgage-calculator-right-itself-active');
+
+    for (const input of inputs) {
+        input.value = '';
+    };
+
+    for (const radioInput of radioInputs) {
+        radioInput.blur();
+    };
 };
 
 // INITIALIZE BUTTON
