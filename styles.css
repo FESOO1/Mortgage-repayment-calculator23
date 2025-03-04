@@ -353,6 +353,7 @@ main {
 .mortgage-calculator-right-empty-header {
     color: white;
     font-weight: 500;
+    text-align: center;
 }
 
 .mortgage-calculator-right-empty-paragraph {
