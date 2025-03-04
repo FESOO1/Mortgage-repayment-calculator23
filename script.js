@@ -77,6 +77,9 @@ function calculatingTheMortgage(e) {
             console.log(monthForMonth);
             console.log('Interest');
         };
+
+        console.log(radioInputs[0].checked === true ? 'repayment' : false);
+        console.log(radioInputs[1].checked === true ? 'interest' : false);
     };
 };
 
