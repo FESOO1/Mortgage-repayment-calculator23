@@ -65,16 +65,17 @@ function calculatingTheMortgage(e) {
         mortgageCalculatorRightEmpty.classList.add('mortgage-calculator-right-empty-hidden');  
         mortgageCalculatorRightItself.classList.add('mortgage-calculator-right-itself-active');  
 
-        if (mortgageCalculator.mortgageType === 'repayment') {
+        if (radioInputs[0].checked) {
             const totalMonths = mortgageCalculator.mortgageTerm * 12;
             const repaymentOutput = mortgageCalculator.mortgageAmount / totalMonths;
 
-            console.log(repaymentOutput);
-            /* const monthlyIterestRate = (mortgageCalculator.mortgageInterestRate / 100) / 12;
-            console.log(monthlyIterestRate);
+            console.log('Repayment');
+        } else if (radioInputs[1].checked) {
+            const monthlyIterestRate = (mortgageCalculator.mortgageInterestRate / 100) / 12;
             const monthForMonth = monthlyIterestRate * mortgageCalculator.mortgageAmount;
 
-            console.log(monthForMonth); */
+            console.log(monthForMonth);
+            console.log('Interest');
         };
     };
 };
