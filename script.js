@@ -101,6 +101,7 @@ function resettingTheForm() {
         radioInputErrorMessage.classList.remove('mortgage-calculator-left-form-input-radio-error-active');
     };
 
+    // ERROR
     for (const inputError of inputContainers) {
         inputError.classList.remove('form-input-error-active');
     };
