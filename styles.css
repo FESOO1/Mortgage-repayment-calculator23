@@ -435,3 +435,49 @@ main {
 .mortgage-calculator-right-itself-output-inner-main-text-two {
     color: white;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 950px){
+    .mortgage-calculator {
+        width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 800px){
+    .mortgage-calculator {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        border: 0;
+        box-shadow: 0 0 0;
+    }
+    body {
+        background-color: var(--c-dark-slate);
+    }
+    main {
+        align-items: flex-start;
+        padding-block: 0;
+    }
+    .mortgage-calculator-right {
+        padding-block: 40px;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .mortgage-calculator-left-form-mortgage-term-interest-rate {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+    .mortgage-calculator-left-form {
+        row-gap: 20px;
+    }
+    .mortgage-calculator-left {
+        padding: 20px;
+    }
+    .mortgage-calculator-left-form-button {
+        width: 90%;
+    }
+}
