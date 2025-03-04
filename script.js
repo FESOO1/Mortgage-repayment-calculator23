@@ -9,7 +9,6 @@ const repaymentInput = document.querySelector('#repaymentInput');
 const interestOnlyInput = document.querySelector('#interestOnlyInput');
 const inputs = document.querySelectorAll('.mortgage-calculator-left-form-input-itself');
 const inputContainers = document.querySelectorAll('.form-input-error');
-/* const inputErrorMessages = document.querySelectorAll('.mortgage-calculator-left-form-input-error'); */
 const radioInputs = document.querySelectorAll('.mortgage-calculator-left-form-input-radio-itself');
 const radioInputErrorMessage = document.querySelector('.mortgage-calculator-left-form-input-radio-error');
 
@@ -77,5 +76,19 @@ function calculatingTheMortgage(e) {
     };
 };
 
+// RESETTING THE FORM
+
+function resettingTheForm() {
+    mortgageCalculator.mortgageAmount = 0;
+    mortgageCalculator.mortgageTerm = 0;
+    mortgageCalculator.mortgageInterestRate = 0;
+    mortgageCalculator.mortgageMontlyRepayment = 0;
+    mortgageCalculator.mortgageTotalRepayment = 0;
+
+    mortgageCalculatorRightEmpty.classList.remove('mortgage-calculator-right-empty-hidden');  
+    mortgageCalculatorRightItself.classList.remove('mortgage-calculator-right-itself-active');
+};
+
 // INITIALIZE BUTTON
+clearEverythingButton.addEventListener('click', resettingTheForm);
 calculateMortgageButton.addEventListener('click', calculatingTheMortgage);
