@@ -93,7 +93,7 @@ function resettingTheForm() {
     };
 
     for (const radioInput of radioInputs) {
-        radioInput.blur();
+        console.log(radioInput.value);
     };
 };
 
