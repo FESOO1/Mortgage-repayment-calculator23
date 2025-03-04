@@ -85,6 +85,7 @@ function resettingTheForm() {
     mortgageCalculator.mortgageMontlyRepayment = 0;
     mortgageCalculator.mortgageTotalRepayment = 0;
 
+    // 
     mortgageCalculatorRightEmpty.classList.remove('mortgage-calculator-right-empty-hidden');  
     mortgageCalculatorRightItself.classList.remove('mortgage-calculator-right-itself-active');
 
